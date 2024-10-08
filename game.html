@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryptex - AboutUs</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="cryptologo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <style>
+    select {
+  padding: 12px 16px;
+  font-size: 16px;
+  background-color: #fff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+img {
+			width: 60px;
+			height: 60px;
+      border: 1px solid black;
+			cursor: pointer;
+		}
+    
+		#name{
+			font-size: 16px;
+			width: 150px;
+      border:  1px solid black;
+      background-color: grey;
+			padding: 10px 10px;
+			cursor: pointer;
+		}
+		#game-container {
+			border: 1px solid black;
+			padding: 10px;
+      background-color: #fff;
+			display: inline-block;
+		}
+		#score {
+			font-size: 20px;
+			margin-top: 20px;
+		}
+    #finish-test{
+        background-color: #4CAF50;
+        color: white;
+        margin-top: 12px;
+        cursor: pointer;
+
+        align-items: center;
+        
+        padding: 10px;
+        border-radius: 10px;
+      }
+      #image-container {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+      }
+      #image-container img {
+        width: 100%;
+        height: 100%;
+      }
+      #file-input {
+        margin-bottom: 10px;
+      }
+      #btnn {
+        margin-right: 10px;
+        background-color: rgb(18, 148, 235);
+        color: white;
+        margin-top: 12px;
+        cursor: pointer;
+
+        align-items: center;
+        
+        padding: 7px;
+        border-radius: 3px; 
+      }
+      #save-button{
+        margin-right: 10px;
+        background-color: rgb(18, 148, 235);
+        color: white;
+        margin-top: 12px;
+        cursor: pointer;
+
+        align-items: center;
+        
+        padding: 7px;
+        border-radius: 3px; 
+      }#view-button{
+        margin-right: 10px;
+        background-color: rgb(18, 148, 235);
+        color: white;
+        margin-top: 12px;
+        cursor: pointer;
+
+        align-items: center;
+        
+        padding: 7px;
+        border-radius: 3px; 
+      }
+      
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="mainpage.html" class="logo">
+        <img src="cryptologo.png" width="32" height="32" alt="Cryptex logo">
+        Cryptex
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="mainpage.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="market.html" class="navbar-link" data-nav-link>Market Updates</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="trending.html" class="navbar-link" data-nav-link>Trending Coins</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="converter.html" class="navbar-link" data-nav-link>Converter</a>
+          </li>
+          <li class="navbar-item">
+            <a href="markettrend.html" class="navbar-link" data-nav-link>Market Trend</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="game.html" class="navbar-link active" data-nav-link>Games</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="predictions.html" class="navbar-link" data-nav-link>Prediction</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="search.html" class="navbar-link" data-nav-link>Search</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="aboutus.html" class="navbar-link" data-nav-link>About us</a>
+          </li>
+
+          
+
+          
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <a href="profile.html" class="btn"><i style='font-size:30px; color:#ffcc32' class='fas'>&#xf2bd;</i></a>
+
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+     
+
+      
+
+
+
+
+
+      <!-- 
+        - #MARKET
+      -->
+
+      <section class="section market" aria-label="market update" data-section>
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Games</h2>
+
+            
+          </div>
+
+          <div class="market-tab">
+
+            
+
+            <table class="market-table">
+
+              <thead class="table-head">
+                <h1>Matching Game</h1>
+
+                
+
+              </thead>
+
+                </tr>
+                
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <p>Click on an image and then click on its name to make a match!</p>
+
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                  </td>
+
+
+                </tr>
+
+                <tr class="table-row">
+
+                  <td class="table-data">
+               
+                    <div id="game-container">
+                      <img src="btcg.png" alt="Bitcoin">
+                      <img src="avaxg.png" alt="Avalanche">
+                      <img src="neug.png" alt="Neutrino">
+                      <img src="solg.png" alt="Solana">
+                      <img src="bnbg.png" alt="BinanceCoin">
+                      <img src="dogeg.png" alt="DogeCoin">
+                      <img src="xrpg.png" alt="Ripple">
+                      <img src="ethg.png" alt="Ethereum">
+                      <br>
+                      <div id="names">
+                      <button id="name">BinanceCoin</button>
+                      <button id="name">Ripple</button>
+                      <button id="name">Solana</button>
+                      <button id="name">Neutrino</button>
+                      <button id="name">Bitcoin</button>
+                      <button id="name">Avalanche</button>
+                      <button id="name">Ethereum</button>
+                      <button id="name">DogeCoin</button>
+                    </div>
+                    </div>
+                  
+                    <div id="score"></div>
+                  
+                    <button id="finish-test">Finish Game</button>
+                
+                    
+                    <script>
+                      // get all images and buttons
+                      var images = document.getElementsByTagName("img");
+                      var buttons = document.getElementsByTagName("button");
+                  
+                      // add click event listeners to images and buttons
+                      for (var i = 0; i < images.length; i++) {
+                        images[i].addEventListener("click", function() {
+                          // check if this image is already selected
+                          if (this.style.border === "3px solid blue") {
+                            // deselect the image
+                            this.style.border = "";
+                            selectedImage = null;
+                          } else {
+                            // deselect any previously selected image
+                            if (selectedImage) {
+                              selectedImage.style.border = "";
+                            }
+                  
+                            // highlight the clicked image
+                            this.style.border = "3px solid blue";
+                  
+                            // store the clicked image for later matching
+                            selectedImage = this;
+                          }
+                        });
+                      }
+                  
+                          for (var i = 0; i < buttons.length; i++) {
+                      buttons[i].addEventListener("click", function() {
+                          // check if the clicked name matches the selected image
+                          if (selectedImage && selectedImage.alt === this.innerText) {
+                              // disable the button
+                              this.disabled = true;
+                  
+                              // increase the score
+                              score++;
+                  
+                              // update the score display
+                              document.getElementById("score").innerText = "Score: " + score;
+                  
+                              // clear the selected image
+                              selectedImage.style.border = "";
+                              selectedImage = null;
+                          }
+                      });
+                  }
+                      for (var i = 0; i < buttons.length; i++) {
+                        buttons[i].addEventListener("click", function() {
+                          // check if the clicked name matches the selected image
+                          if (selectedImage && selectedImage.alt === this.innerText) {
+                            // disable the button
+                            this.disabled = true;
+                  
+                            // increase the score
+                            score++;
+                  
+                            // clear the selected image
+                            selectedImage.style.border = "";
+                            selectedImage = null;
+                          } else {
+                            // deselect the selected image
+                            if (selectedImage) {
+                              selectedImage.style.border = "";
+                              selectedImage = null;
+                            }
+                          }
+                        });
+                      }
+                  
+                      // variable to store the currently selected image
+                      var selectedImage = null;
+                  
+                      // variable to store the score
+                      var score = 0;
+                  
+                      // add click event listener to finish test button
+                      document.getElementById("finish-test").addEventListener("click", function() {
+                        // display the score
+                        alert("Your score is: " + score);
+                  
+                        // refresh the page
+                        location.reload();
+                      });
+                    </script>
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr><br>
+                <tr class="table-row">
+                  
+            
+                  <td class="table-data">
+                    
+    
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <div id="map"></div>
+
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                   
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                    <td class="table-data">
+
+                      <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                        
+                      </button>
+                    </td>
+                    <td class="table-data">
+                     
+                      <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                        
+                      </button>
+                    </td>
+  
+                  </tr>
+                  <tr class="table-row">
+
+                    <td class="table-data">
+                      <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                        
+                      </button>
+                    </td>
+  
+                  </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      
+        
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

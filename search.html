@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryptex - AboutUs</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="cryptologo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <style>
+    select {
+  padding: 12px 16px;
+  font-size: 16px;
+  background-color: #fff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#coin-input {
+        width: 350px;
+        font-size: 16px;
+        padding: 10px;
+      }
+      #srch{
+        background-color: #4CAF50;
+        color: white;
+        margin-top: 12px;
+        cursor: pointer;
+
+        align-items: center;
+        
+        padding: 10px;
+        border-radius: 10px;
+      }
+      #location-btn{
+        background-color: #4CAF50;
+        color: white;
+        margin-top: 12px;
+        cursor: pointer;
+
+        align-items: center;
+        
+        padding: 10px;
+        border-radius: 10px;
+      }
+  </style>
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="mainpage.html" class="logo">
+        <img src="cryptologo.png" width="32" height="32" alt="Cryptex logo">
+        Cryptex
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="mainpage.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="market.html" class="navbar-link" data-nav-link>Market Updates</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="trending.html" class="navbar-link" data-nav-link>Trending Coins</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="converter.html" class="navbar-link" data-nav-link>Converter</a>
+          </li>
+          <li class="navbar-item">
+            <a href="markettrend.html" class="navbar-link" data-nav-link>Market Trend</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="game.html" class="navbar-link" data-nav-link>Games</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="predictions.html" class="navbar-link" data-nav-link>Prediction</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="search.html" class="navbar-link active" data-nav-link>Search</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="aboutus.html" class="navbar-link" data-nav-link>About us</a>
+          </li>
+
+          
+
+          
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+      <a href="profile.html" class="btn"><i style='font-size:30px; color:#ffcc32' class='fas'>&#xf2bd;</i></a>
+
+    
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+     
+
+      
+
+
+
+
+
+      <!-- 
+        - #MARKET
+      -->
+
+      <section class="section market" aria-label="market update" data-section>
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Search Cryptocurrencies</h2>
+
+            
+          </div>
+
+          <div class="market-tab">
+            <p>Enter the coin name, not its symbol ⚠</p>
+            <br>
+
+            <table class="market-table">
+                <form id="search-form">
+                    <input type="text" id="coin-input" placeholder="Search for a cryptocurrency">
+                    &nbsp;
+                    <br>
+                    <br>
+                    <select id="currency-select">
+                        <option value="usd">USD</option>
+                        <option value="eur">EUR</option>
+                        <option value="gbp">GBP</option>
+                        <option value="inr">INR</option>
+                      </select>
+                    <button type="submit" id="srch">Search</button>
+                  </form>
+              <thead class="table-head">
+                
+                
+
+              </thead>
+
+                </tr>
+                
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <div id="coin_name">Coin Name:</div>
+                    <div id="error"></div>
+                    <div id="market_cap">Market Cap:</div>
+                    <div id="price">Price:</div>
+                    <div id="volume">24hr Volume:</div>
+                    <div id="change">24hr Change:</div>
+                    <div id="last_updated">Last Updated:</div>
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                  </td>
+
+
+                </tr>
+
+                <tr class="table-row">
+
+                  <td class="table-data">
+
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr><br>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <div id="map"></div>
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                   
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                    <td class="table-data">
+                     
+                      <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                        
+                      </button>
+                    </td>
+                    <td class="table-data">
+                     
+                      <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                        
+                      </button>
+                    </td>
+  
+                  </tr>
+                  <tr class="table-row">
+
+                    <td class="table-data">
+                      <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                        
+                      </button>
+                    </td>
+  
+                  </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      
+        
+
+      </div>
+    </div>
+
+  </footer>
+ 
+<script>
+    function getCoinData() {
+  var coin = $("#coin-input").val();
+  var currency = $("#currency-select").val();
+  $.ajax({
+    url: "https://api.coingecko.com/api/v3/simple/price",
+    data: {
+      ids: coin,
+      vs_currencies: currency,
+      include_market_cap: true,
+      include_24hr_vol: true,
+      include_24hr_change: true,
+      include_last_updated_at: true,
+      precision: 4
+    },
+    success: function(data) {
+      if (typeof data[coin][currency] !== "undefined") {
+        $("#coin_name").html("Coin Name: " + coin.charAt(0).toUpperCase() + coin.slice(1));
+        $("#market_cap").html("Market Cap: " + data[coin][currency + "_market_cap"]);
+        $("#price").html("Price: " + data[coin][currency]+" "+[currency.toUpperCase()]);
+        $("#volume").html("24hr Volume: " + data[coin][currency + "_24h_vol"]);
+        $("#change").html("24hr Change: " + data[coin][currency + "_24h_change"] + "%");
+        var last_updated = new Date(data[coin].last_updated_at * 1000);
+        $("#last_updated").html("Last Updated: " + last_updated.toLocaleString());
+      } else {
+        $("#error").html("Error: Currency not found");
+      }
+    },
+    error: function() {
+      $("#error").html("Error: Failed to get data from the server");
+    }
+  });
+  $("#coin-input").val(""); // clear the input field
+  return false; // prevent the form from submitting
+}
+
+$(document).ready(function() {
+  $("#search-form").submit(getCoinData);
+});
+
+  </script>
+  <script src="script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="search.js"></script>
+
+</body>
+
+</html>

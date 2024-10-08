@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+</head>
+<style>
+	body {
+		font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		background-image: url(bg.jpeg);
+	}
+	h2 {
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	form {
+		width: 300px;
+		margin: 0 auto;
+		background-color: #fff;
+		padding: 20px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+
+	label {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	input {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		margin-bottom: 2px;
+		box-sizing: border-box;
+		font-size: 16px;
+	}
+
+	button {
+		display: block;
+		background-color: #4CAF50;
+		color: #fff;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 3px;
+		cursor: pointer;
+		font-size: 16px;
+		margin-top: 20px;
+	}
+
+	button[type=submit] {
+		background-color: #4CAF50;
+		color: #fff;
+	}
+
+	button[type=submit]:hover {
+		background-color: #45a049;
+	}
+
+	button[type=button] {
+		background-color: #ddd;
+		color: #444;
+	}
+
+	button[type=button]:hover {
+		background-color: #ccc;
+	}
+</style>
+
+<body>
+	
+	<form>
+		<h2>Cryptex-Sign Up</h2>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" required pattern="[a-zA-Z\s]+" title="Name should contain only characters and whitespaces"><br><br>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+		<label for="phone">Phone:</label>
+		<input type="text" id="phone" name="phone" required><br><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required><br>
+
+		<button type="submit">Sign Up</button>
+	</form>
+    <form action="login.html">
+		<a>Registered User?</a>
+        <button type="submit">Login</button>
+    </form>
+
+	<button onclick="viewUsers()">View Users</button>
+
+	<script>
+		function saveUser() {
+  var users = JSON.parse(localStorage.getItem('users')) || [];
+  var username = document.getElementById('username').value;
+  var email = document.getElementById('email').value;
+  var phone = document.getElementById('phone').value;
+  var password = document.getElementById('password').value;
+  var id = users.length > 0 ? users[users.length - 1].id + 1 : 1; // generate auto-incrementing ID
+  var user = { id: id, username: username, email: email, phone: phone, password: password};
+  users.push(user);
+  localStorage.setItem('users', JSON.stringify(users));
+  alert('Registered successfully! Please Login!');
+  window.location.href = 'login.html';
+}
+
+
+		function viewUsers() {
+			var users = JSON.parse(localStorage.getItem('users')) || [];
+			if (users.length > 0) {
+				var message = '';
+				for (var i = 0; i < users.length; i++) {
+					message += 'ID: ' + users[i].id + '\n';
+					message += 'Username: ' + users[i].username + '\n';
+					message += 'Email: ' + users[i].email + '\n';
+					message += 'Phone: ' + users[i].phone + '\n';
+					message += 'Password: ' + users[i].password + '\n\n';
+				}
+				alert(message);
+			} else {
+				alert('No users found!');
+			}
+		}
+
+		document.querySelector('form').addEventListener('submit', function(event) {
+			event.preventDefault();
+			saveUser();
+		});
+	</script>
+</body>
+</html>

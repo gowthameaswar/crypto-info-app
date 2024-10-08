@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryptex - AboutUs</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="cryptologo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+  <style>
+    select {
+    padding: 12px 16px;
+    font-size: 16px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+    #coin-input {
+        width: 350px;
+        font-size: 16px;
+        padding: 10px;
+      }
+      #srch{
+        background-color: #4CAF50;
+        color: white;
+        margin-top: 12px;
+        cursor: pointer;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+      }
+  </style>
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="mainpage.html" class="logo">
+        <img src="cryptologo.png" width="32" height="32" alt="Cryptex logo">
+        Cryptex
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="mainpage.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="market.html" class="navbar-link" data-nav-link>Market Updates</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="trending.html" class="navbar-link" data-nav-link>Trending Coins</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="converter.html" class="navbar-link active" data-nav-link>Converter</a>
+          </li>
+          <li class="navbar-item">
+            <a href="markettrend.html" class="navbar-link" data-nav-link>Market Trend</a>
+          </li>
+          
+          <li class="navbar-item">
+            <a href="game.html" class="navbar-link" data-nav-link>Games</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="predictions.html" class="navbar-link" data-nav-link>Prediction</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="search.html" class="navbar-link" data-nav-link>Search</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="aboutus.html" class="navbar-link" data-nav-link>About us</a>
+          </li>
+
+          
+
+          
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+      <a href="profile.html" class="btn"><i style='font-size:30px; color:#ffcc32' class='fas'>&#xf2bd;</i></a>
+
+    
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+     
+
+      
+
+
+
+
+
+      <!-- 
+        - #MARKET
+      -->
+
+      <section class="section market" aria-label="market update" data-section>
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Crypto Converter</h2>
+
+            
+          </div>
+
+          <div class="market-tab">
+<h2>Choose the type of cryptocurrency and the currency in which you want to convert:</h2>
+<br>
+            
+
+            <table class="market-table">
+
+              <thead class="table-head">
+
+                
+
+              </thead>   
+                <tr class="table-row">
+                  <td class="table-data">
+                    <crypto-converter-widget shadow symbol live background-color="#383a59" border-radius="0.99rem" fiat="indian-rupee" crypto="bitcoin" amount="1" font-family="sans-serif" decimal-places="2"></crypto-converter-widget>
+                    <script async src="https://cdn.jsdelivr.net/gh/dejurin/crypto-converter-widget@1.5.2/dist/latest.min.js"></script>
+                    
+                  </td>
+
+                </tr>
+
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <p>Got confused on where to invest, compare and decide!🤩</p>
+
+                    <br>
+                    <select id="coin1" name="coin1">
+                      <option value="bitcoin">Bitcoin</option>
+                      <option value="ethereum">Ethereum</option>
+                      <option value="cardano">Cardano</option>
+                      <option value="binancecoin">Binance Coin</option>
+                      <option value="ripple">XRP</option>
+                      <option value="dogecoin">Dogecoin</option>
+                      <option value="solana">Solana</option>
+                      <option value="polkadot">Polkadot</option>
+                      <option value="Avalanche-2">Avalanche</option>
+                      <option value="chainlink">Chainlink</option>
+                      <option value="uniswap">Uniswap</option>
+                  </select> &nbsp;
+                  <select id="coin2" name="coin2">
+                      <option value="bitcoin">Bitcoin</option>
+                      <option value="ethereum">Ethereum</option>
+                      <option value="cardano">Cardano</option>
+                      <option value="binancecoin">Binance Coin</option>
+                      <option value="ripple">XRP</option>
+                      <option value="dogecoin">Dogecoin</option>
+                      <option value="solana">Solana</option>
+                      <option value="polkadot">Polkadot</option>
+                      <option value="Avalanche-2">Avalanche</option>
+                      <option value="chainlink">Chainlink</option>
+                      <option value="uniswap">Uniswap</option>
+                  </select><br><br>
+                  <button id=srch onclick="getCryptoPrices()">Compare</button>
+                  <br>
+                  <div id="crypto-container"></div>
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                  </td>
+
+                  
+
+                  
+
+                
+
+                </tr>
+
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      
+        
+
+      </div>
+    </div>
+
+  </footer>
+
+  <script>
+    function getCryptoPrices() {
+      // Get the user inputs
+      const coin1 = document.getElementById('coin1').value.trim().toLowerCase();
+      const coin2 = document.getElementById('coin2').value.trim().toLowerCase();
+  
+      // Construct the API URL
+      const apiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&ids=${coin1},${coin2}`;
+  
+      // Fetch the data from the API
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          // Analyze the data
+          const crypto1 = data[0];
+          const crypto2 = data[1];
+          let name1 = crypto1.name;
+          let name2 = crypto2.name;
+          let percent1 = crypto1.price_change_percentage_24h;
+          let percent2 = crypto2.price_change_percentage_24h;
+          let marketCap1 = crypto1.market_cap;
+          let marketCap2 = crypto2.market_cap;
+          let high24h1 = crypto1.high_24h;
+          let high24h2 = crypto2.high_24h;
+          let low24h1 = crypto1.low_24h;
+          let low24h2 = crypto2.low_24h;
+  
+          // Compare the price change percentages
+          let bestCoin = '';
+          if (percent1 > percent2) {
+            diff=Math.abs(percent1 - percent2).toFixed(2);
+            name1 = `<b>${name1}</b>`;
+            bestCoin = name1;
+            
+          } else if (percent2 > percent1) {
+            diff=Math.abs(percent2 - percent1).toFixed(2);
+            name2 = `<b>${name2}</b>`;
+            bestCoin = name2;
+          }
+  
+          // Display the data
+          const cryptoContainer = document.getElementById('crypto-container');
+          cryptoContainer.innerHTML = '';
+  
+          const div1 = document.createElement('div');
+          div1.innerHTML = `${name1} (${crypto1.symbol.toUpperCase()})<br>
+          Price: ₹${crypto1.current_price.toFixed(2)} (${percent1.toFixed(2)}% 24h change)<br>
+          Market Cap: ₹${marketCap1.toLocaleString()}<br>
+          24h High: ₹${high24h1.toFixed(2)}<br>
+          24h Low: ₹${low24h1.toFixed(2)}<br><br>`;
+          cryptoContainer.appendChild(div1);
+  
+          const div2 = document.createElement('div');
+          div2.innerHTML = `${name2} (${crypto2.symbol.toUpperCase()})<br>
+          Price: ₹${crypto2.current_price.toFixed(2)} (${percent2.toFixed(2)}% 24h change)<br>
+          Market Cap: ₹${marketCap2.toLocaleString()}<br>
+          24h High: ₹${high24h2.toFixed(2)}<br>
+          24h Low: ₹${low24h2.toFixed(2)}<br><br>`;
+          cryptoContainer.appendChild(div2);
+  
+          if (bestCoin) {
+            const div3 = document.createElement('div');
+            div3.innerHTML = `The best coin to invest currently to get quick profit is ${bestCoin} with a ${diff}% difference in 24h price change percentage.`;
+            cryptoContainer.appendChild(div3);
+          }
+        })
+        .catch(error => {
+          const cryptoContainer = document.getElementById('crypto-container');
+          cryptoContainer.innerHTML = `Error: ${error.message}`;
+        });
+    }
+  </script>
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   <script src="script.js"> </script>
+</body>
+
+</html>

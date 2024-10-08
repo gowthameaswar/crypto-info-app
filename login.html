@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<style>
+	body {
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		background-image: url(bg.jpeg);
+	}
+	h2 {
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	form {
+		width: 300px;
+		margin: 0 auto;
+		background-color: #fff;
+		padding: 20px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+
+	label {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	input {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		margin-bottom: 2px;
+		box-sizing: border-box;
+		font-size: 16px;
+	}
+
+	button {
+		display: block;
+		background-color: #4CAF50;
+		color: #fff;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 3px;
+		cursor: pointer;
+		font-size: 16px;
+		margin-top: 20px;
+	}
+
+	button[type=submit] {
+		background-color: #4CAF50;
+		color: #fff;
+	}
+
+	button[type=submit]:hover {
+		background-color: #45a049;
+	}
+
+	button[type=button] {
+		background-color: #ddd;
+		color: #444;
+	}
+
+	button[type=button]:hover {
+		background-color: #ccc;
+	}
+</style>
+<body>
+	
+	<form>
+		<h2>Cryptex-Login</h2>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required ><br><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required><br><br>
+		<button type="submit">Login</button>
+	</form>
+	<form action="index.html">
+		<a>New User?</a>
+        <button type="submit">Sign Up</button>
+    </form>
+
+	<script>
+		document.querySelector('form').addEventListener('submit', function(event) {
+			event.preventDefault();
+			var email = document.getElementById('email').value;
+			var password = document.getElementById('password').value;
+			var users = JSON.parse(localStorage.getItem('users')) || [];
+			var loggedIn = false;
+			var currentId = null;
+			for (var i = 0; i < users.length; i++) {
+				if (users[i].email === email && users[i].password === password) {
+					loggedIn = true;
+					currentId = users[i].id;
+					break;
+				}
+			}
+			if (loggedIn) {
+				localStorage.setItem('currentId', currentId);
+				alert('Login successful!');
+				window.location.href = 'mainpage.html';
+			} else {
+				alert('Invalid credentials. Please try again.');
+			}
+		});
+	</script>
+</body>
+</html>

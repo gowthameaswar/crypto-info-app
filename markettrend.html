@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryptex - Market Trend</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="cryptologo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+ 
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="mainpage.html" class="logo">
+        <img src="cryptologo.png" width="32" height="32" alt="Cryptex logo">
+        Cryptex
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="mainpage.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="market.html" class="navbar-link" data-nav-link>Market Updates</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="trending.html" class="navbar-link" data-nav-link>Trending Coins</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="converter.html" class="navbar-link" data-nav-link>Converter</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="markettrend.html" class="navbar-link active" data-nav-link>Market Trend</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="game.html" class="navbar-link" data-nav-link>Games</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="predictions.html" class="navbar-link" data-nav-link>Prediction</a>
+          </li>
+          
+          <li class="navbar-item">
+            <a href="search.html" class="navbar-link" data-nav-link>Search</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="aboutus.html" class="navbar-link" data-nav-link>About us</a>
+          </li>
+
+          
+
+          
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <a href="profile.html" class="btn"><i style='font-size:30px; color:#ffcc32' class='fas'>&#xf2bd;</i></a>
+
+
+    </div>
+  </header>
+
+
+  <main>
+    <article>
+
+
+      <section class="section market" aria-label="market update" data-section>
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Market Trend</h2>
+
+            
+          </div>
+
+          <div class="market-tab">
+            <h2>Select the cryptocoin and type of currency to visualize the trend for selected time period:</h2>
+            <br>
+            <table class="market-table">
+
+              <thead class="table-head">
+
+                
+
+              </thead>
+              
+                <tr class="table-row">
+
+                </tr>
+                
+                <tr class="table-row">
+                    <select id="cryptoSelect">
+                        <option value="bitcoin">Bitcoin</option>
+                        <option value="ethereum">Ethereum</option>
+                        <option value="litecoin">Litecoin</option>
+                        <option value="tether">Tether</option>
+                        <option value="binancecoin">Binancecoin</option>
+                        <option value="solana">Solana</option>
+                        <option value="ripple">XRP</option>
+                        <option value="cardano">Cardano</option>
+                        <option value="dogecoin">Dogecoin</option>
+                      </select>
+    
+                      &nbsp
+                      <select id="currencySelect">
+                        <option value="inr">INR</option>
+                        <option value="usd">USD</option>
+                        <option value="eur">EUR</option>
+                      </select>
+                      &nbsp
+                      
+                      <select id="daysSelect">
+                        <option value="1">1 day</option>
+                        <option value="7">7 days</option>
+                        <option value="30">30 days</option>
+                        <option value="90">90 days</option>
+                      </select>
+                  <td class="table-data">
+                    <div id="myChart"></div>
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                  </td>
+
+                  
+
+                  
+
+                
+
+                </tr>
+
+                <tr class="table-row">
+                  
+
+                  <td class="table-data">
+                    <h2 class="h2 section-title">Exchange rates</h2>
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                    <h2>Exchange rates of all coins w.r.t Bitcoin</h2>
+
+                  </td>
+                  
+
+                </tr>
+                <thead class="table-head">
+
+                  <tr class="table-row table-title">
+  
+                    <th class="table-heading"></th>
+  
+                    
+                    <th class="table-heading" scope="col">Coin Symbol</th>
+  
+                    <th class="table-heading" scope="col">Exchange Rate</th>
+  
+                    
+  
+                    
+  
+                  </tr>
+  
+                </thead>
+                <tbody id="exchange-rates">
+              </tbody>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                   
+                  </td>
+
+                </tr>
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      
+                    </button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      
+        
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script>
+    // Fetch data from Coingecko API
+    fetch("https://api.coingecko.com/api/v3/exchange_rates")
+      .then(response => response.json())
+      .then(data => {
+        const exchangeRatesTable = document.getElementById("exchange-rates");
+        Object.keys(data.rates).forEach(currency => {
+          const name=data.rates[currency].name;
+          const value = data.rates[currency].value;
+          const row = `
+            <tr class="table-row">
+                <td class="table-data">
+                    <div class="wrapper">
+              <td class="table-data">${name} (${currency})</td>
+              
+              <td class="table-data">${value}</td>
+            </tr>
+          `;
+          exchangeRatesTable.innerHTML += row;
+        });
+      })
+      .catch(error => console.error(error));
+  </script>
+  <script src="script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   <script src="chart.js"> </script>
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+   <style>
+     select {
+   padding: 12px 16px;
+   font-size: 16px;
+   background-color: #fff;
+   color: black;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+ }
+   </style>
+   <script>
+     const cryptoSelect = document.getElementById("cryptoSelect");
+     const currencySelect = document.getElementById("currencySelect");
+     const daysSelect = document.getElementById("daysSelect");
+ 
+ 
+ 
+     function updateChart() {
+     const selectedCrypto = cryptoSelect.value;
+     const selectedCurrency = currencySelect.value;
+     const selectedDays = daysSelect.value;
+ 
+ 
+     const API_URL = `https://api.coingecko.com/api/v3/coins/${selectedCrypto}/market_chart?vs_currency=${selectedCurrency}&days=${selectedDays}`;
+ 
+     fetch(API_URL)
+         .then(response => response.json())
+         .then(data => {
+         const labels = data.prices.map(price => price[0]);
+         const values = data.prices.map(price => price[1]);
+         
+ 
+         Plotly.newPlot("myChart", [{
+             type: "line",
+             x: labels,
+             y: values,
+             name: `${selectedCrypto} price in ${selectedCurrency.toUpperCase()}`
+         }], {
+             xaxis: {
+             title: "UNIX Timestamp"
+             },
+             yaxis: {
+             }
+         });
+         });
+     }
+ 
+     cryptoSelect.addEventListener("change", updateChart);
+     currencySelect.addEventListener("change", updateChart);
+     daysSelect.addEventListener("change", updateChart);
+ 
+ 
+     updateChart();
+ 
+   </script>
+</body>
+
+</html>
